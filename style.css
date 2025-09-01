@@ -61,6 +61,7 @@ a {
   margin: 24px 0;
 }
 .link {
+  display: block;
   background: var(--grey-700);
   border-radius: 8px;
   padding: 14px 0;
@@ -68,7 +69,11 @@ a {
   font-weight: 700;
   transition: all 300ms ease;
 }
-
+/* for ios touch devices
+.link:hover {
+  background: var(--accent-colour);
+  color: var(--grey-900);
+} */
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -77,21 +82,16 @@ a {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
+/* except ios touch devcies */
 @media (hover: hover) and (pointer: fine) {
   .link:hover {
     background: var(--accent-colour);
-    cursor: pointer;
-  }
-  .link:hover a {
     color: var(--grey-900);
   }
 }
 @media (hover: none) and (pointer: coarse) {
   .link:active {
     background: var(--accent-colour);
-  }
-  .link:active a {
     color: var(--grey-900);
   }
 }
